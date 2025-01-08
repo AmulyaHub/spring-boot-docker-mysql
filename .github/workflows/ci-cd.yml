@@ -43,7 +43,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: hello_world_db
         with:
-          entrypoint: ["docker-entrypoint.sh", "mysqld"]
+          entrypoint: docker-entrypoint.sh
         
       # Step 6: Run tests (optional)
       - name: Run tests
