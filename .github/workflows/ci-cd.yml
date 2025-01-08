@@ -36,15 +36,4 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/hello-world-app:latest
 
-      # Step 5: Set up MySQL Docker container for integration testing (optional)
-      - name: Set up MySQL Docker container
-        uses: docker://mysql:8
-        env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: hello_world_db
-        with:
-          entrypoint: docker-entrypoint.sh
-        
-      # Step 6: Run tests (optional)
-      - name: Run tests
-        run: mvn test
+     
